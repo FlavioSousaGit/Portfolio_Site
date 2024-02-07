@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@100;400&display=swap');
+
+:root {    /* variaveis em css */
+    --cor-primaria-:#000000;
+    --cor-secundaria-:#F6F6F6;
+    --cor-terciaria-:#22D4FD;
+    --cor-quarta-:#5c2121;
+    --cor-Cinza:#272727;   
+    
+    --fonte-primaria:'Montserrat',sans-serif;
+    --fonte-secundaria:'Krona One', sans-serif; 
+}
+
+*{
+    margin: 0;   /* Todo Posicionamento da pagina - reset os padrões*/
+    padding: 0;
+
+.Cabecalho{
+    padding: 2% 0% 0% 16%;
+    display: flex;
+    justify-content: space-between; 
+    gap: 6%;  
+}
+
+.Cabecalho__Menu{
+    display: flex;
+    justify-content: space-between; 
+    gap: 15%;
+         
+}
+
+.Cabecalho__Menu__Links{
+    text-decoration: none;
+    font-family: var(--fonte-primaria); 
+    border-radius: 10.267px; 
+}
+
+.Cabecalho__Menu__Links:hover {
+    background-color: var(--cor-quarta-); /* o valor da variavel foi atribuido no inicio do codigo             */
+} 
+
+}
+body {
+    /* height: 100vh; */             /* Define o altura a ser usado na tela (nesse caso foi definido 100% da tela)*/
+    box-sizing: border-box;         /* Garantir que ás "tags filhos" fiquem dentro dás "tags Pais" */
+    background-color:var(--cor-primaria-);    /* cor de fundo */       
+    color: var(--cor-secundaria-);               /* cor da fonte no bady */
+}
+.PaiTodosElementosDaPagina{            /* chama "tag main " acessar esse site para mais imformaçoes 'https://css-tricks.com/snippets/css/a-guide-to-flexbox/' */
+    padding: 9% 14%;                   /* Ajustar a margem de todos elementos para o fim da tela */
+    display: flex;                     /* codigo para editar posicionamento dos elementos*/
+    align-items: flex-start;           /* centraliza os elementos da pagina */
+    justify-content: space-between;    /* colocar espaço entre os elementos */
+    gap: 50px;
+} 
+.PaiTodosElementosDaPagina__Conteudo {
+    width: 68%;  /*  Largura dos elementos da Tags */  
+    display: flex;   /* codigo para editar posicionamento dos elementos*/
+    flex-direction: column;  /* Espacamento vertical */
+    gap: 20px; /* O quanto de Espacamento */
+}
+.PaiTodosElementosDaPagina__Conteudo__Titulo{
+    font-size: 2,25rem; /* Tamanho da fonte convertido de 36px para rem. 16px da 1rem*/
+    font-family: var(--fonte-secundaria); /* Impostar o link da fonte no inicio do codigo */
+}
+.PaiTodosElementosDaPagina__Conteudo__Paragravo{
+    font-size: 1,5rem;   /* Tamanho da fonte convertido de 24px para rem. 16px da 1rem*/
+    font-family: var(--fonte-primaria);
+}
+.PaiTodosElementosDaPagina__Conteudo__Botoes {
+    box-sizing: border-box;
+    margin: 2%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    font-size: 0,75rem; /* Tamanho da fonte convertido de 12px para rem. 16px da 1rem*/
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;    
+}
+
+.PaiTodosElementosDaPagina__Conteudo__SubTitulo{
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+}
+
+
+.PaiTodosElementosDaPagina__Conteudo__Links {
+    /* background-color: #22D4FD;  cor do preenchimento em volta do texto */
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    color: var(--cor-secundaria-);  /* cor da fonte */     
+    width: 40%; /*  largura  */
+    text-align: center; /*  Centralizar texto */
+    font-size: 1,5rem;   /* Tamanho da fonte convertido de 24px para rem. 16px da 1rem*/ 
+    font-family: var(--fonte-primaria); /* Chamar fonte externa importada para codigo */
+    border-radius: 16.267px;  /* Bordas arredondadas */
+    text-decoration-line: none; /* Retirar padroes de decoração */
+}
+.PaiTodosElementosDaPagina__Conteudo__Links:hover { /* utilizar "hover" sombra no botao */
+    background-color: var(--cor-quarta-);
+}
+
+.PaiTodosElementosDaPagina__Conteudo__Imagens {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+.Titulo_destaque {                   /* chama a class dentro do <strong> colocar ".Nome da class" */
+    color: var(--cor-terciaria-);                /* cor do Titulo da pagina*/
+}
+.Paragrafo_especialidade{
+    color: var(--cor-quarta-);
+}
+span {
+    color: var(--cor-terciaria-);                    /* Destacar um texto exp. h1, <span> Texto destado </span> */
+    border: 1px solid var(--cor-terciaria-);         /* colocar borda em um texto */
+    padding: 6px;                       /* expessura da borda */
+}
+a {                                 /* Botoes link da pagina */
+    color: var(--cor-secundaria-);              /* cor do botao*/
+    border: 1px solid var(--cor-terciaria-);   /* borda do botao */
+    padding: 6px;                  /* espaçamento da borda para o botão */
+}
+
+.Rodape{
+    background-color: var(--cor-terciaria-);
+    color: var(--cor-primaria-);
+    padding: 24px; 
+    display: flex;
+    justify-content: center;    
+    font-family: var(--fonte-primaria);
+    font-size: 1.25rem; /* Tamanho da fonte convertido de 20px para rem. 16px da 1rem*/ 
+    font-weight: 400;   
+}
+
+@media (max-width:1500px){    /* Ipad mudar elementos da tela quando resolução <= 1200px de largura*/
+    .Cabecalho{
+    padding: 15%  
+    justify-content: center;                                
+}        
+.PaiTodosElementosDaPagina{
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding: 28% 10%;     
+}   
+
+.PaiTodosElementosDaPagina__Conteudo{
+    width: auto;  /* colocar largura automaticamente */        
+}    
+} 
+
+@media (max-width:1000px){    /* Ipad mudar elementos da tela quando resolução <= 1200px de largura*/
+    .Cabecalho{
+        padding: 2% 
+        justify-content: center; 
+                                        
+    }        
+    .PaiTodosElementosDaPagina{
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 4% 10%;     
+    }   
+    
+    .PaiTodosElementosDaPagina__Conteudo{
+        width: auto;  /* colocar largura automaticamente */        
+    }
+    .PaiTodosElementosDaPagina__Conteudo__SubTitulo{
+        font-size: 1rem;    
+    }    
+} 
+
+@media (max-width:700px){    /* celularres mudar elementos da tela quando resolução <= 1200px de largura*/
+    .Cabecalho{
+    padding: 10%; 
+    justify-content: center;                                
+}        
+.PaiTodosElementosDaPagina{
+    flex-direction: column-reverse;
+    padding: 5%;
+}
+.PaiTodosElementosDaPagina__Conteudo{
+    width: auto;  /* colocar largura automaticamente */
+}
+.PaiTodosElementosDaPagina__Conteudo__SubTitulo{
+    font-size: 1rem;    
+}
+
+}
